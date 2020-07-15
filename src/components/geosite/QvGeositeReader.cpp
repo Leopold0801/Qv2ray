@@ -38,6 +38,7 @@ namespace Qv2ray::components::geosite
 
             for (const auto &e : sites.entry())
             {
+                LOG("GEOSITE: ", QString::fromStdString(e.country_code()).toLower());
                 // We want to use lower string.
                 list << QString::fromStdString(e.country_code()).toLower();
             }
